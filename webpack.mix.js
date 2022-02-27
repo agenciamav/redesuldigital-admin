@@ -20,6 +20,9 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .webpackConfig(require('./webpack.config'));
 
+// mix copy images to public/images
+mix.copy('resources/img', 'public/img');
+
 if (mix.inProduction()) {
     mix.version();
 }
