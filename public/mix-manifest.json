@@ -1,4 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/img/logo-icon.svg": "/img/logo-icon.svg",
+    "/img/logo-lg.svg": "/img/logo-lg.svg",
+    "/img/logo-md.svg": "/img/logo-md.svg",
+    "/img/logo-sm.svg": "/img/logo-sm.svg",
+    "/img/logo-xs.svg": "/img/logo-xs.svg",
+    "/img/icon.svg": "/img/icon.svg",
+    "/img/logo.svg": "/img/logo.svg"
 }
