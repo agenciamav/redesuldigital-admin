@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
 
                     // create question
                     $sectionModel->questions()->create([
+                        'quiz_id' => $quiz->id,
                         'type' =>  $question['type'] ?? '',
                         'options' => json_encode($question['options'] ?? ''),
                         'text' => $question['text'] ?? '',

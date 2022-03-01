@@ -11,6 +11,11 @@ class Quiz extends Model
         'description',
     ];
 
+    public function sections()
+    {
+        return $this->hasMany(Section::class);
+    }
+
     public function questions()
     {
         return $this->hasMany(Question::class);

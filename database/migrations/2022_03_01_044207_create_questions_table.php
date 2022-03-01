@@ -18,8 +18,12 @@ return new class extends Migration
             $table->id();
 
             // foreign key to the section table
-            $table->unsignedBigInteger('section_id');
+            $table->unsignedBigInteger('section_id')->nullable();
             $table->foreign('section_id')->references('id')->on('sections');
+
+            // foreign key to the quiz table
+            $table->unsignedBigInteger('quiz_id')->nullable();
+            $table->foreign('quiz_id')->references('id')->on('quizzes');
 
             $table->text('text')->nullable();
 
