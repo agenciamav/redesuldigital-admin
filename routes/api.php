@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('quizzes', 'QuizController')->middleware('auth:sanctum');
+
+// Get the questions for a quiz
+Route::get('quizzes/{quiz}/questions', [QuestionController::class, 'index']);
+
+// Save the answers for a quiz
+Route::post('quizzes/{quiz}/answers', [QuestionController::class, 'store']);
