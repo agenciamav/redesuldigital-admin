@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        $quizSections = json_decode(file_get_contents(__DIR__ . './questions.json'), true);
+        $quizSections = json_decode(file_get_contents(__DIR__ . '/questions.json'), true);
 
         foreach ($quizSections['questions'] as $section) {
             if (Arr::exists($section, 'questions')) {
