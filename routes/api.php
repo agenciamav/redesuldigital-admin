@@ -25,7 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::apiResource('quizzes', 'QuizController')->middleware('auth:sanctum');
 
 // Get the questions for a quiz
-Route::get('quiz', [App\Http\Controllers\QuizController::class, 'index']);
+Route::get('/quiz', [App\Http\Controllers\QuizController::class, 'index']);
 
 // Save the answers for a quiz
 // Route::post('quizzes/{quiz}/answers', [App\Http\Controllers\QuestionController::class, 'store']);
