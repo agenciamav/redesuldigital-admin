@@ -1,0 +1,327 @@
+{
+    "questions": {
+        "A": {
+            "id": "A",
+            "title": "SOBRE VOCÊ",
+            "questions": {
+                "0": {
+                    "id": 0,
+                    "text": "Qual o nome da Unidade de Saúde?",
+                    "type": "text"
+                },
+                "1": {
+                    "id": 1,
+                    "text": "Qual o município?",
+                    "type": "select",
+                    "options": [
+                        "...cities"
+                    ]
+                },
+                "2": {
+                    "id": 2,
+                    "text": "Qual a sua categoria profissional?",
+                    "type": "text"
+                },
+                "3": {
+                    "id": 3,
+                    "text": "Qual a sua data de nascimento?",
+                    "type": "date"
+                },
+                "4": {
+                    "id": 4,
+                    "text": "Qual a sua identificação de gênero?",
+                    "type": "radio",
+                    "options": [
+                        {
+                            "text": "Masculino",
+                            "value": "M"
+                        },
+                        {
+                            "text": "Feminino",
+                            "value": "F"
+                        },
+                        {
+                            "text": "Não binário",
+                            "value": "NB"
+                        }
+                    ]
+                },
+                "5": {
+                    "id": 5,
+                    "text": "Quanto tempo de serviço você tem na Estratégia de Saúde da Família?",
+                    "type": "radio",
+                    "options": [
+                        "Menos de 1 ano",
+                        "Entre 1 e 3 anos",
+                        "Entre 3 e 5 anos",
+                        "Mais de 5 anos"
+                    ]
+                }
+            }
+        },
+        "B": {
+            "id": "B",
+            "title": "POPULAÇÃO",
+            "questions": {
+                "1": {
+                    "text": "Há uma população definida sob os cuidados das equipes de Atenção Primária à Saúde (APS)."
+                },
+                "2": {
+                    "text": "Os profissionais da APS não buscam saber sobre as necessidades de saúde da população que está sob os seus cuidados."
+                },
+                "3": {
+                    "text": "Tudo que é feito na APS está de acordo com o a população necessita."
+                },
+                "4": {
+                    "text": "A APS está dividida em áreas e micro áreas com uma população definida."
+                },
+                "5": {
+                    "text": "A APS possui um formulário/sistema de informação que controla e organiza os atendimentos de saúde da população no município e região."
+                },
+                "6": {
+                    "text": "Este formulário/sistema de informação considera a realidade e problemas da população."
+                },
+                "7": {
+                    "text": "Todas as demandas para especialistas efetuadas pela APS são atendidas pelos serviços especializados e a equipe conhece os serviços."
+                },
+                "8": {
+                    "text": "Todas as demandas de internação hospitalar efetuadas pela APS são atendidas e a equipe conhece os serviços."
+                },
+                "9": {
+                    "text": "As pessoas e famílias que estão sob os cuidados da APS estão cadastradas na unidade."
+                },
+                "10": {
+                    "text": "O cadastramento da população na APS não é feito por família."
+                },
+                "11": {
+                    "text": "As famílias estão classificadas de acordo com as condições sociais."
+                },
+                "12": {
+                    "text": "A população não está classificada por sexo, idade e outros."
+                },
+                "13": {
+                    "text": "A população está classificada de acordo com os fatores de risco para o adoecimento."
+                },
+                "14": {
+                    "text": "A população está classificada na APS de acordo com o seu diagnóstico médico."
+                }
+            }
+        },
+        "C": {
+            "id": "C",
+            "title": "ATENÇÃO PRIMÁRIA A SAÚDE",
+            "questions": {
+                "15": {
+                    "text": "A equipe de APS não tem responsabilidades pela população que está sob seus cuidados."
+                },
+                "16": {
+                    "text": "Há uma equipe multiprofissional com responsabilidades claras de cada membro na APS."
+                },
+                "17": {
+                    "text": "As responsabilidades da equipe multiprofissional da APS para atendimento dos diferentes problemas de saúde são definidas a partir de normas específicas do município."
+                },
+                "18": {
+                    "text": "O encaminhamento da APS é necessário para ter acesso aos outros níveis de atenção à saúde."
+                },
+                "19": {
+                    "text": "Não há incentivos para os usuários adotarem a APS como porta de entrada."
+                },
+                "20": {
+                    "text": "As relações entre a APS e os demais níveis de atenção à saúde estão claramente definidas."
+                },
+                "21": {
+                    "text": "A APS possui sistemas de informação suficientes para registrar e disponibilizar informações clínicas, epidemiológicas e gerenciais."
+                },
+                "22": {
+                    "text": "Não há uma boa interação entre as equipes de APS e de atenção especializada(consultas ou orientações rotineiras por escrito, por correio eletrônico ou sessões clínicas conjuntas)."
+                },
+                "23": {
+                    "text": "Há um vínculo entre as equipes de APS e os usuários e suas famílias."
+                },
+                "24": {
+                    "text": "A APS está organizada para prestar os cuidados aos usuários que apresentam condições agudas de acordo com um sistema de classificação de riscos das urgências e emergências."
+                },
+                "25": {
+                    "text": "A APS está organizada para prestar os cuidados às mulheres e às crianças, segundo normas específicas do município."
+                },
+                "26": {
+                    "text": "A APS está organizada para prestar os cuidados aos adolescentes e aos idosos, segundo normas específicas do município."
+                },
+                "27": {
+                    "text": "A APS não está organizada para prestar os cuidados aos usuários que apresentam condições crônicas como hipertensão e doenças cardiovasculares, diabetes, tuberculose, hanseníase, transtornos mentais, HIV/ AIDS, doenças respiratórias crônicas, doenças renais e doenças bucais, segundo normas específicas do município."
+                },
+                "28": {
+                    "text": "A APS está organizada para fazer o acompanhamento das crianças, dos adolescentes e dos idosos segundo normas específicas do município."
+                },
+                "29": {
+                    "text": "O prontuário do usuário utilizado na API está organizado por família."
+                },
+                "30": {
+                    "text": "As equipes da APS utilizam rotinciramente instrumentos de abordagem familiar(genograma, listagem de problemas familiares e outros)."
+                },
+                "31": {
+                    "text": "As equipes da APS não estão articuladas com as organizações de bairro, religiosas, etc."
+                },
+                "32": {
+                    "text": "Os ACS estão capacitados para articular as equipes com as organizações de bairro, religiosas, etc."
+                },
+                "33": {
+                    "text": "Há um conselho de bairro que acompanha e fiscaliza a APS."
+                }
+            }
+        },
+        "D": {
+            "id": "D",
+            "title": "SISTEMAS DE APOIO",
+            "questions": {
+                "34": {
+                    "text": "A farmácia da APS conta com medicamentos definidos a partir de normas específicas do município."
+                },
+                "35": {
+                    "text": "A farmácia da APS dispõe de medicamentos relacionados aos problemas de saúde da população que está sob seus cuidados."
+                },
+                "36": {
+                    "text": "A farmácia da APS não dispõe de formulários/ sistema de informação para a solicitação de medicamentos e produtos farmacêuticos a uma Central"
+                },
+                "37": {
+                    "text": "A farmácia da APS armazena os medicamentos e produtos farmacêuticos."
+                },
+                "38": {
+                    "text": "A farmácia da APS contempla os mecanismos para distribuição controlada dos medicamentos e produtos farmacêuticos."
+                },
+                "39": {
+                    "text": "A farmácia da APS contempla os mecanismos para distribuição controlada dos medicamentos."
+                },
+                "40": {
+                    "text": "A farmácia da APS não utiliza material educativo que contêm informações sobre a finalidade, efeitos colaterais e contra indicação de medicamentos essenciais da APS."
+                },
+                "41": {
+                    "text": "A farmácia da APS orienta os usuários quanto aos medicamentos utilizados."
+                },
+                "42": {
+                    "text": "A farmácia da APS dispõe de recursos para a avaliação da interação entre medicamentos."
+                },
+                "43": {
+                    "text": "A farmácia da APS realiza avaliações da adesão dos usuários aos tratamentos medicamentosos."
+                },
+                "44": {
+                    "text": "A farmácia da APS tem conhecimento para identificar e prevenir os efeitos colaterais de medicamentos."
+                },
+                "45": {
+                    "text": "Não há um sistema de apoio à APS, que realiza exames como: raio X, ultrassom, mamografia, e outros; de qualidade e em quantidade suficiente para atender a demanda."
+                },
+                "46": {
+                    "text": "Há normas especificas do municipio que orientam indicação dos exames como raios X, ultrassom, mamografia outros sua interpretação."
+                },
+                "47": {
+                    "text": "Há um sistema estruturado de exames de análises clinicas cuja colcta das amostras está nas unidades de APS processamento do material em laboratórios de referência."
+                },
+                "48": {
+                    "text": "Há normas especificas do municipio que orientam indicação de exames de análiscs clinicas, sua coleta, seu fluxo, seu processamento análise de seus resultados"
+                }
+            }
+        },
+        "E": {
+            "id": "E",
+            "title": "SISTEMA LOGÍSTICO",
+            "questions": {
+                "49": {
+                    "text": "Não há um sistema de informação na APS que integra as informações epidemiológicas e gerenciais."
+                },
+                "50": {
+                    "text": "Há um sistema de informação que incorpora toda população cadastrada na APS e a classifica em subpopulações por riscos."
+                },
+                "51": {
+                    "text": "Há um cartão específico da APS para identificar o usuário, família e microárea, quando eles se aprentam a unidade de saúde."
+                },
+                "52": {
+                    "text": "Há um prontuário familiar eletrônico único que pode ser acessado em todos os serviços públicos de saúde do municipio."
+                },
+                "53": {
+                    "text": "Esse prontuário familiar eletrônico único integra as informações de todos os serviços públicos de saúde do município."
+                },
+                "54": {
+                    "text": "O prontuário familiar cletrônico não permite emissão de receitas cletrônicas."
+                },
+                "55": {
+                    "text": "O prontuário familiar eletrônico está construido para emitir lembretes e alertas e dar respostas relativas às situações de saúde da população sob os cuidados da APS."
+                },
+                "56": {
+                    "text": "A equipe da APS agenda diretamente consultas e exames nos serviços especializados."
+                },
+                "57": {
+                    "text": "A equipe da APS agenda diretamente os atendimentos hospitalares que não são de urgência e emergência."
+                },
+                "58": {
+                    "text": "A equipe de APS agenda diretamente alguns exames de análise clínica, imagem e patologia clínica."
+                },
+                "59": {
+                    "text": "Não hã um sistema de regulação das urgências e emergências com médico regulador permanente que se articula com APS."
+                },
+                "60": {
+                    "text": "Há um sistema de transporte que dá apoio APS, no deslocamento dos usuários para os serviços especializados, laboratórios, hospitais e outros."
+                },
+                "61": {
+                    "text": "O transporte utilizado para urgência/emergência é adequado conforme necessidade do paciente."
+                },
+                "62": {
+                    "text": "Não há veículos adequados para transportar usuários nas consultas e exames agendados."
+                },
+                "63": {
+                    "text": "Há veiculos adequados para transporte de amostras de exames de análise clínicas."
+                },
+                "64": {
+                    "text": "Os residuos (lixo) de saúde da APS são transportados em veículos adequados."
+                }
+            }
+        },
+        "F": {
+            "id": "F",
+            "title": "SISTEMA DE GOVERNANÇA",
+            "questions": {
+                "65": {
+                    "text": "Há uma política de valorização da APS pelo secretário de saúde, trabalhadores e usuários para o seu uso e acesso aos demais níveis de atenção à saúde."
+                },
+                "66": {
+                    "text": "A organização da APS tem ocorrido com a participação ativa do secretário de saúde, trabalhadores e usuários."
+                },
+                "67": {
+                    "text": "A equipe da APS não está organizada para plancjar as ações, considerando os problemas da população que está sob seus cuidados. "
+                },
+                "68": {
+                    "text": "A missão, visão e os valores da APS são estabelecidos, conhecidos e compartilhados pelo secretário de saúde, trabalhadores e usuários."
+                },
+                "69": {
+                    "text": "Há um sistema que monitora e avalia a APS"
+                },
+                "70": {
+                    "text": "Esse sistema contempla a avaliação dos usuários."
+                },
+                "71": {
+                    "text": "Não há um sistema de avaliação para certificar se os serviços prestados pela APS estão dentro dos padrões de qualidade preconizados pelo Ministério da Saúde."
+                },
+                "72": {
+                    "text": "Há profissionais terceirizados na APS."
+                },
+                "73": {
+                    "text": "Os profissionais atuam conforme os objetivos da APS (promoção, prevenção, reabilitação, tratamento, diagnóstico e educação) e são incentivados para tal."
+                },
+                "74": {
+                    "text": "Os gerentes da APS, dos serviços especializados e hospital não conhecem e não aderem aos objetivos da APS."
+                },
+                "75": {
+                    "text": "A APS utiliza de todos os seus recursos materiais, humanos c financeiros para o atendimento ao usuário antes de encaminhá-lo à outros serviços."
+                },
+                "76": {
+                    "text": "Os incentivos financeiros para os serviços de APS estão de acordo com os seus objetivos."
+                },
+                "77": {
+                    "text": "O pagamento dos prestadores de serviços terceirizados (laboratórios, hospitais e clínicas) se  dá através do orçamento do município."
+                },
+                "78": {
+                    "text": "As equipes da APS são consultadas sobre prioridade da sua área para aplicação dos recursos financeiros."
+                }
+            }
+        }
+    }
+}
