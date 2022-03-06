@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
+
+            // all responses will be json encoded in the database and will be decoded in the frontend
+            // all quiz responses stored in one json object with the question id as key
+            $table->longText('data');
+
+            $table->unsignedBigInteger('quiz_id')->nullable();
+            $table->foreign('quiz_id')->references('id')->on('quizzes');
+
             $table->timestamps();
         });
     }

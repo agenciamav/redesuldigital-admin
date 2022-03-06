@@ -14,7 +14,7 @@ class QuizController extends Controller
      */
     public function index()
     {
-        return response()->json(Quiz::with(['sections', 'questions'])->first());
+        return response()->json(Quiz::with(['questions', 'sections'])->first());
     }
 
     /**

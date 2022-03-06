@@ -25,10 +25,10 @@ class DatabaseSeeder extends Seeder
 
         foreach ($quizSections['questions'] as $section) {
             if (Arr::exists($section, 'questions')) {
-                foreach ($section['questions'] as $question) {
+                foreach ($section['questions'] as $index => $question) {
                     // create section if not exists
                     $sectionModel = \App\Models\Section::firstOrCreate(
-                        ['letter' => $section['id'], 'quiz_id' => $quiz->id],
+                        ['code' => $section['id'], 'quiz_id' => $quiz->id],
                         [
                             'title' => $section['title'],
                             'description' => $section['description'] ?? null,
@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
                     // create question
                     $sectionModel->questions()->create([
                         'quiz_id' => $quiz->id,
+                        'code' => $index,
                         'type' =>  $question['type'] ?? '',
                         'options' => json_encode($question['options'] ?? ''),
                         'text' => $question['text'] ?? '',

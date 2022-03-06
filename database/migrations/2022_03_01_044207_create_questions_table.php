@@ -17,6 +17,9 @@ return new class extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
 
+            $table->integer('code')->nullable();
+            $table->index(['code', 'section_id']);
+
             // foreign key to the section table
             $table->unsignedBigInteger('section_id')->nullable();
             $table->foreign('section_id')->references('id')->on('sections');

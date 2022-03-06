@@ -13,7 +13,7 @@ class Section extends Model
 
     protected $fillable = [
         'quiz_id',
-        'letter',
+        'code',
         'description',
     ];
 
