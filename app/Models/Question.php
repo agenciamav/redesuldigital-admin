@@ -10,9 +10,27 @@ class Question extends Model
     use HasFactory;
 
     protected $fillable = [
+        'code',
         'text',
         'type',
         'options',
+    ];
+
+    protected $appends = ['full_code'];
+
+    // visible attributes
+    protected $visible = [
+        'code',
+        'full_code',
+        'text',
+        'type',
+        'options',
+    ];
+
+    // casts
+    protected $casts = [
+        'options' => 'array',
+        'full_code' => 'string',
     ];
 
     public function quiz()
@@ -33,5 +51,15 @@ class Question extends Model
     public function getOptionsAttribute($value)
     {
         return json_decode($value, true);
+    }
+
+    public function setOptionsAttribute($value)
+    {
+        $this->attributes['options'] = json_encode($value);
+    }
+
+    public function getFullCodeAttribute($value)
+    {
+        return $this->section->code . '.' . $this->code;
     }
 }

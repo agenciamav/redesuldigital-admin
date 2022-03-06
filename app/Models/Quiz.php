@@ -11,18 +11,18 @@ class Quiz extends Model
         'description',
     ];
 
-    public function sections()
+    public function sections ()
     {
         return $this->hasMany(Section::class);
     }
 
     public function questions()
     {
-        return $this->hasMany(Question::class);
+        return $this->hasManyThrough(Question::class, Section::class);
     }
 
     public function answers()
     {
-        return $this->hasManyThrough(Answer::class, Question::class);
+        return $this->hasMany(Answers::class);
     }
 }
