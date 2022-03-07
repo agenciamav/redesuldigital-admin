@@ -16,21 +16,21 @@ class Question extends Model
         'options',
     ];
 
-    protected $appends = ['full_code'];
+    protected $appends = ['full_code', 'section_code'];
 
     // visible attributes
     protected $visible = [
         'code',
-        'full_code',
         'text',
         'type',
         'options',
+        'full_code',
+        'section_code'
     ];
 
     // casts
     protected $casts = [
         'options' => 'array',
-        'full_code' => 'string',
     ];
 
     public function quiz()
@@ -56,6 +56,11 @@ class Question extends Model
     public function setOptionsAttribute($value)
     {
         $this->attributes['options'] = json_encode($value);
+    }
+
+    public function getSectionCodeAttribute($value)
+    {
+        return $this->section->code;
     }
 
     public function getFullCodeAttribute($value)
