@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
                         'quiz_id' => $quiz->id,
                         'code' => $index,
                         'type' =>  $question['type'] ?? '',
-                        'options' => $question['options'] ?? [],
+                        'options' => $question['options'] ?? null,
                         'text' => $question['text'] ?? '',
                     ]);
                 }
