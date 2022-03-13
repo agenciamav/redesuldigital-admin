@@ -33,6 +33,8 @@ return new class extends Migration
             $table->text('type')->nullable();
             $table->text('options')->nullable();
 
+            $table->boolean('required')->default(false);
+
             // Status
             $table->enum('status', ['active', 'inactive'])->default('active');
 

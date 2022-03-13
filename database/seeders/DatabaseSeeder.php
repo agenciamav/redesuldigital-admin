@@ -42,6 +42,7 @@ class DatabaseSeeder extends Seeder
                         'type' =>  $question['type'] ?? '',
                         'options' => $question['options'] ?? null,
                         'text' => $question['text'] ?? '',
+                        'required' => $question['required'] ?? false,
                     ]);
                 }
             }
