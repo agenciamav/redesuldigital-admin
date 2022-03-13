@@ -14,6 +14,7 @@ class Question extends Model
         'text',
         'type',
         'options',
+        'required'
     ];
 
     protected $appends = ['full_code', 'section_code'];
@@ -25,7 +26,8 @@ class Question extends Model
         'type',
         'options',
         'full_code',
-        'section_code'
+        'section_code',
+        'required'
     ];
 
     // casts
