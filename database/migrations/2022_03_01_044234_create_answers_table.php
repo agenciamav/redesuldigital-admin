@@ -20,6 +20,15 @@ return new class extends Migration
             // all quiz responses stored in one json object with the question id as key
             $table->longText('data');
 
+            $table->text('APS')->nullable();
+            $table->text('city')->nullable();
+            $table->text('state')->nullable();
+
+            $table->text('duration')->nullable();
+            $table->text('started_at')->nullable();
+            $table->text('finished_at')->nullable();
+            $table->integer('progress')->nullable();
+
             $table->unsignedBigInteger('quiz_id')->nullable();
             $table->foreign('quiz_id')->references('id')->on('quizzes');
 

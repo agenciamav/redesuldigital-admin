@@ -25,7 +25,25 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-        // $quiz = Quiz::create($request->all());
+        // get the latest quiz
+        $quiz = Quiz::latest()->first();
+
+        // $meta
+        $meta = $request->meta;
+
+        // prepare the data to be stored
+        $data = [
+            'data' => json_encode($request->answers),
+            'APS' => $meta['APS'],
+            'city'  => $meta['city'],
+            'state' => $meta['state'],
+            'duration' => $meta['duration'],
+            'started_at' => $meta['startedAt'],
+            'finished_at' => $meta['finishedAt'],
+        ];
+
+        // store the data
+        return $quiz->answers()->create($data);
     }
 
     /**

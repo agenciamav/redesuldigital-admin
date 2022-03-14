@@ -9,6 +9,25 @@ class Answers extends Model
     protected $fillable = [
         'data',
         'quiz_id',
+        'APS',
+        'city',
+        'state',
+        'duration',
+        'progress',
+        'started_at',
+        'finished_at',
+    ];
+
+    protected $visible = [
+        'data',
+        'quiz_id',
+        'APS',
+        'city',
+        'state',
+        'duration',
+        'progress',
+        'started_at',
+        'finished_at',
     ];
 
     protected $casts = [
@@ -29,5 +48,4 @@ class Answers extends Model
     {
         $this->attributes['data'] = json_encode($value);
     }
-
 }
