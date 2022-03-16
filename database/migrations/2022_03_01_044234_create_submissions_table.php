@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('answers', function (Blueprint $table) {
+        Schema::create('submissions', function (Blueprint $table) {
             $table->id();
-
-            // all responses will be json encoded in the database and will be decoded in the frontend
-            // all quiz responses stored in one json object with the question id as key
-            $table->longText('data');
 
             $table->text('APS')->nullable();
             $table->text('city')->nullable();
@@ -43,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('answers');
+        Schema::dropIfExists('submissions');
     }
 };

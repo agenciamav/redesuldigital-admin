@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Quiz;
+use App\Models\Submission;
+use App\Exports\SubmissionsExport;
+use Illuminate\Support\Facades\Log;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\Test\Constraint\ResponseStatusCodeSame;
 
 class QuizController extends Controller
 {
@@ -26,25 +31,37 @@ class QuizController extends Controller
     public function store(Request $request)
     {
         // get the latest quiz
-        $quiz = Quiz::latest()->first();
+        $quiz = Quiz::latest()->with(['sections.questions'])->first();
 
-        // $meta
-        $meta = $request->meta;
+        $answers = $request->answers;
 
-        // prepare the data to be stored
-        $data = [
-            'data' => json_encode($request->answers),
-            'APS' => $meta['APS'],
-            'city'  => $meta['city'],
-            'state' => $meta['state'],
-            'duration' => $meta['duration'],
-            'started_at' => $meta['startedAt'],
-            'finished_at' => $meta['finishedAt'],
-        ];
+        $submission = Submission::create([
+            'quiz_id' => $quiz->id,
+            'APS' => $request->meta['APS'],
+            'city'  => $request->meta['city'],
+            'state' => $request->meta['state'],
+            'duration' => $request->meta['duration'],
+            'progress' => $request->meta['progress'],
+            'started_at' => $request->meta['startedAt'],
+            'finished_at' => $request->meta['finishedAt'],
+        ]);
 
-        // store the data
-        return $quiz->answers()->create($data);
+        // foreach
+        foreach ($submission->quiz->questions as $question) {
+            $answer = $answers[$question->full_code] ?? null;
+            if ($answer) {
+                $submission->answers()->create([
+                    'question_id' => $question->id,
+                    'answer' => $answer,
+                ]);
+            }
+        }
+
+        return $submission;
     }
+
+
+
 
     /**
      * Display the specified resource.
@@ -80,5 +97,10 @@ class QuizController extends Controller
     {
         $quiz->delete();
         return response()->json(null, 204);
+    }
+
+    public function export()
+    {
+        return Excel::download(new SubmissionsExport, 'pesquisa.xlsx');
     }
 }

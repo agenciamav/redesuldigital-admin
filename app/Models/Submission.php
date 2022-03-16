@@ -4,10 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Answers extends Model
+class Submission extends Model
 {
     protected $fillable = [
-        'data',
         'quiz_id',
         'APS',
         'city',
@@ -19,7 +18,6 @@ class Answers extends Model
     ];
 
     protected $visible = [
-        'data',
         'quiz_id',
         'APS',
         'city',
@@ -30,22 +28,13 @@ class Answers extends Model
         'finished_at',
     ];
 
-    protected $casts = [
-        'data' => 'array',
-    ];
-
     public function quiz()
     {
         return $this->belongsTo(Quiz::class);
     }
 
-    public function getDataAttribute($value)
+    public function answers()
     {
-        return json_decode($value);
-    }
-
-    public function setDataAttribute($value)
-    {
-        $this->attributes['data'] = json_encode($value);
+        return $this->hasMany(Answer::class)->with('question');
     }
 }

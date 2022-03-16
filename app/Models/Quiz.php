@@ -21,8 +21,8 @@ class Quiz extends Model
         return $this->hasManyThrough(Question::class, Section::class);
     }
 
-    public function answers()
+    public function submissions()
     {
-        return $this->hasMany(Answers::class);
+        return $this->hasMany(Submission::class);
     }
 }
