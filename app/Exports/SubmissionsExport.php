@@ -18,8 +18,14 @@ class SubmissionsExport implements FromCollection, WithHeadings, ShouldAutoSize
 
         $headings = [];
 
-        foreach ($submission->answers as $answer) {
-            $headings[] = $answer->question->full_code;
+        if ($submission) {
+            foreach ($submission->getAttributes() as $key => $value) {
+                $headings[] = $key;
+            }
+
+            foreach ($submission->answers as $answer) {
+                $headings[] = $answer->question->full_code;
+            }
         }
 
         return $headings;

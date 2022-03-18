@@ -6,12 +6,12 @@
             "questions": {
                 "0": {
                     "id": 0,
-                    "text": "Digite nome completo",
+                    "text": "Digite o seu nome completo",
                     "type": "text"
                 },
                 "1": {
                     "id": 1,
-                    "text": "Selecione o município",
+                    "text": "Informe o município",
                     "type": "select",
                     "options": [
                         "Ijuí / RS"
@@ -30,12 +30,17 @@
                 },
                 "3": {
                     "id": 3,
-                    "text": "Qual a sua data de nascimento?",
-                    "type": "date"
+                    "text": "Qual a sua idade?",
+                    "name": "idade",
+                    "type": "number",
+                    "min": 18,
+                    "max": 65,
+                    "step": 1
                 },
                 "4": {
                     "id": 4,
                     "text": "Qual a sua identificação de gênero?",
+                    "name": "gênero",
                     "type": "radio",
                     "options": [
                         "Masculino",
@@ -50,7 +55,7 @@
                     "options": [
                         "Menos de 1 mês",
                         "Entre 1 e 6 meses",
-                        "Entre 6 e 12 meses",
+                        "Entre 6 meses e 1 ano",
                         "Entre 1 e 3 anos",
                         "Entre 3 e 5 anos",
                         "Mais de 5 anos"
