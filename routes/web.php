@@ -24,8 +24,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+Route::get('/dashboard', function (\App\Services\GoogleSheets $googleSheets) {
+
+    $data = $googleSheets->getSheet('Worksheet');
+
+    return Inertia::render('Dashboard', [
+        'data' => $data,
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
