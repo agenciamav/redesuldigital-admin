@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Submission extends Model
 {
     protected $fillable = [
+        'id',
         'quiz_id',
-        'APS',
+        'name',
+        'terms_accepted_at',
         'city',
         'state',
         'duration',
@@ -18,8 +20,10 @@ class Submission extends Model
     ];
 
     protected $visible = [
+        'id',
         'quiz_id',
-        'APS',
+        'name',
+        'terms_accepted_at',
         'city',
         'state',
         'duration',

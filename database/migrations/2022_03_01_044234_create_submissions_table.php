@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('submissions', function (Blueprint $table) {
             $table->id();
 
-            $table->text('APS')->nullable();
+            $table->text('name')->nullable();
             $table->text('city')->nullable();
             $table->text('state')->nullable();
 
@@ -24,6 +24,8 @@ return new class extends Migration
             $table->text('started_at')->nullable();
             $table->text('finished_at')->nullable();
             $table->integer('progress')->nullable();
+
+            $table->date('terms_accepted_at')->nullable();
 
             $table->unsignedBigInteger('quiz_id')->nullable();
             $table->foreign('quiz_id')->references('id')->on('quizzes');

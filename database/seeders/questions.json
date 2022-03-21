@@ -7,15 +7,17 @@
                 "0": {
                     "id": 0,
                     "text": "Digite o seu nome completo",
-                    "type": "text"
+                    "type": "text",
+                    "required": true
                 },
                 "1": {
                     "id": 1,
                     "text": "Informe o município",
                     "type": "select",
                     "options": [
-                        "Ijuí / RS"
-                    ]
+                        "Ijuí"
+                    ],
+                    "required": true
                 },
                 "2": {
                     "id": 2,
