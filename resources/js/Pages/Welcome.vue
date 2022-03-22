@@ -1,12 +1,12 @@
 <script setup>
 import { Head, Link } from "@inertiajs/inertia-vue3";
 import AppLogo from "@/Components/ApplicationLogo.vue";
+import packageJson from "@/../../package.json";
 
 defineProps({
   canLogin: Boolean,
   canRegister: Boolean,
   laravelVersion: String,
-  appVersion: String,
   phpVersion: String,
 });
 </script>
@@ -59,7 +59,7 @@ defineProps({
 
       <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
         <div class="ml-4 text-sm text-gray-500 sm:ml-0">
-          v{{ appVersion }} (PHP v{{ phpVersion }})
+          v{{ packageJson.version }} (PHP v{{ phpVersion }})
         </div>
       </div>
     </div>
