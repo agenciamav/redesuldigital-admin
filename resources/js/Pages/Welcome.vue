@@ -6,7 +6,6 @@ defineProps({
   canLogin: Boolean,
   canRegister: Boolean,
   laravelVersion: String,
-  appVersion: String,
   phpVersion: String,
 });
 </script>
@@ -59,7 +58,7 @@ defineProps({
 
       <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
         <div class="ml-4 text-sm text-gray-500 sm:ml-0">
-          v{{ appVersion }} (PHP v{{ phpVersion }})
+          PHP v{{ phpVersion }}
         </div>
       </div>
     </div>
