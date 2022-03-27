@@ -1,7 +1,6 @@
 <script setup>
 import { Head, Link } from "@inertiajs/inertia-vue3";
 import AppLogo from "@/Components/ApplicationLogo.vue";
-import packageJson from "@/../../package.json";
 
 defineProps({
   canLogin: Boolean,
@@ -59,9 +58,7 @@ defineProps({
 
       <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
         <div class="ml-4 text-sm text-gray-500 sm:ml-0">
-          v{{ packageJson.version }} - PHP v{{ phpVersion }} - Laravel v{{
-            laravelVersion
-          }}
+          PHP v{{ phpVersion }} - Laravel v{{ laravelVersion }}
         </div>
       </div>
     </div>
