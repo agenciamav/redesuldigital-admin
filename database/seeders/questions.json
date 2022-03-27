@@ -41,17 +41,12 @@
                 },
                 "3": {
                     "id": 3,
-                    "text": "Qual a sua idade?",
-                    "name": "idade",
-                    "type": "number",
-                    "min": 18,
-                    "max": 65,
-                    "step": 1
+                    "text": "Qual a sua data de nascimento?",
+                    "type": "date"
                 },
                 "4": {
                     "id": 4,
                     "text": "Qual a sua identificação de gênero?",
-                    "name": "gênero",
                     "type": "radio",
                     "options": [
                         "Masculino",
