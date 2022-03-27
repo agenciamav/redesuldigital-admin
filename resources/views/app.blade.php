@@ -12,14 +12,14 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-</head>
-
-<body class="font-sans antialiased">
-    @inertia
 
     <!-- Scripts -->
     @routes
     <script src="{{ mix('js/app.js') }}" defer></script>
+</head>
+
+<body class="font-sans antialiased">
+    @inertia
 
     @env('local')
     <script src="http://localhost:8080/js/bundle.js"></script>
