@@ -32,7 +32,7 @@ class QuizController extends Controller
     public function store(Request $request)
     {
         // get the latest quiz
-        $quiz = Quiz::latest()->with(['sections.questions'])->first();
+        $quiz = Quiz::latest()->first();
 
         $answers = $request->answers;
         $meta = $request->meta;
@@ -85,9 +85,6 @@ class QuizController extends Controller
         return $submission;
     }
 
-
-
-
     /**
      * Display the specified resource.
      *
@@ -122,10 +119,5 @@ class QuizController extends Controller
     {
         $quiz->delete();
         return response()->json(null, 204);
-    }
-
-    public function export()
-    {
-        return Excel::download(new SubmissionsExport, 'pesquisa.xlsx');
     }
 }
