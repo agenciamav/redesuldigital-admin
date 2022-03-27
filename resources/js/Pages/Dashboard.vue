@@ -16,22 +16,7 @@ import { Head } from "@inertiajs/inertia-vue3";
     <div class="py-12">
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-          <div class="p-6 bg-white border-b border-gray-200 text-center">
-            <a
-              href="/dashboard/export"
-              class="
-                bg-gray-800
-                text-white
-                py-2
-                px-6
-                rounded-sm
-                inline-flex
-                items-center
-              "
-            >
-              Exportar para Excel
-            </a>
-          </div>
+          <div class="p-6 bg-white border-b border-gray-200 text-center"></div>
         </div>
       </div>
     </div>

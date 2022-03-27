@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\QuizController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +25,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function (\App\Services\GoogleSheets $googleSheets) {
-
-    $data = $googleSheets->getSheet('Worksheet');
-
-    return Inertia::render('Dashboard', [
-        'data' => $data,
-    ]);
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

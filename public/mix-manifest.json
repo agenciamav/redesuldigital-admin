@@ -1,26 +1,9 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "/js/app.js": "/js/app.js?id=df6f716dabb501947f3d498213774ab0",
-    "/css/app.css": "/css/app.css?id=8c5f82d8718a008d90178c6ac5d05d9e"
-=======
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/img/logo-icon.svg": "/img/logo-icon.svg",
-    "/img/logo-lg.svg": "/img/logo-lg.svg",
-    "/img/logo-md.svg": "/img/logo-md.svg",
-    "/img/logo-sm.svg": "/img/logo-sm.svg",
-    "/img/logo-xs.svg": "/img/logo-xs.svg",
-    "/img/icon.svg": "/img/icon.svg",
-    "/img/logo.svg": "/img/logo.svg"
->>>>>>> parent of ea33ecb... Add exports to excel feature
-=======
-    "/js/app.js": "/js/app.js?id=4462e48215678849d86359fce2305500",
-    "/css/app.css": "/css/app.css?id=9b59dbeb68342c95ac08feab6a755871",
+    "/js/app.js": "/js/app.js?id=6d1a76d20cdc6b3fefe6bed0fd4cd6f2",
+    "/css/app.css": "/css/app.css?id=5df1a1e2803726cb926dbaf56ca473f4",
     "/img/icon.svg": "/img/icon.svg?id=c3be8ac6d98a04c917832aa105ca3a23",
     "/img/logo-lg.svg": "/img/logo-lg.svg?id=f4766d514bf9784800f50f0ce9b07a5b",
     "/img/logo-md.svg": "/img/logo-md.svg?id=bbff597f9edf791108552bc2c95bd393",
     "/img/logo-sm.svg": "/img/logo-sm.svg?id=95bd433ae93071f2885442ef64a1656f",
     "/img/logo.svg": "/img/logo.svg?id=8982fcb372fea287bac283952e704498"
->>>>>>> parent of c2eee03... Reinstalled laravel breeze
 }
